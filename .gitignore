@@ -1,0 +1,10 @@
+venv/
+tmp_files/
+logs/
+__pycache__/
+deployment/dist/
+
+*.db
+*.env
+.idea/*
+

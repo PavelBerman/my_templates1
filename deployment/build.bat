@@ -1,0 +1,1 @@
+@%~f0\..\..\venv\Scripts\python.exe %~f0\..\build_lambda.py %*
