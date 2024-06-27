@@ -4,11 +4,12 @@ from unittest import mock
 import responses
 
 from api_example import MY_API_URL
+from db_handlers import get_test_db_session
 from lambda_function import lambda_handler
 
 
 @responses.activate
-@mock.patch('db_funcs.Session')
+@mock.patch('db_funcs.get_db_session', side_effect=get_test_db_session)
 def test_lambda_handler(db_session_mock, s3_test_bucket):
     responses.post(MY_API_URL, json={
         "body": "Great success!",
